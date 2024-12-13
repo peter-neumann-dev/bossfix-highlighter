@@ -1,0 +1,60 @@
+.bossfix-highlighted {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0.1em;
+  padding: 0 0.2em !important;
+  border-radius: 4px !important;
+  background: linear-gradient(45deg, #ffd700, #ffa500) !important;
+  color: #000000 !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  text-shadow: none !important;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.bossfix-highlighted * {
+  color: #000000 !important;
+}
+
+.bossfix-highlighted .boss-emoji {
+  display: inline-block;
+  margin-left: 0.2em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transform: scale(0.8);
+}
+
+.bossfix-highlighted:hover {
+  transform: scale(1.05);
+}
+
+.bossfix-toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10000;
+  max-width: calc(100vw - 40px);
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: linear-gradient(
+    45deg,
+    #ffd700,
+    #ffa500
+  ); /* Same gradient as highlighted words */
+  color: #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
